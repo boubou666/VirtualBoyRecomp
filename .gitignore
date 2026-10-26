@@ -1,0 +1,21 @@
+# Build output
+/build*/
+/out/
+/generated/
+
+# ROMs, saves and per-game configs stay local
+*.vb
+*.vboy
+*.sav
+/roms/
+/games/*
+!/games/example.toml
+
+# Runtime logs
+unrecompiled.txt
+
+# IDE
+.vs/
+.vscode/
+.idea/
+CMakeUserPresets.json

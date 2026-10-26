@@ -1,0 +1,3 @@
+# Normalize line endings in the repository; check out native endings per platform.
+* text=auto
+*.vb binary

@@ -1,0 +1,20 @@
+# Example game config. Copy this file to games/<name>.toml (ignored by git),
+# point it at your ROM and configure with:
+#   cmake -S . -B build -DVB_GAME_CONFIG=games/<name>.toml
+# The executable is named after the config file.
+
+# ROM image, relative to this file (or absolute). Can also be given with -DVB_ROM=...
+rom = "../roms/game.vb"
+
+# Optional: refuse ROMs whose CRC32 differs (vbrecomp prints the CRC of your dump).
+# crc32 = 0x00000000
+
+# Treat ROM words that point into code as additional function entries
+# (catches callbacks and state-machine tables that analysis can't see).
+scan_code_pointers = true
+
+# Extra function entry points, e.g. addresses reported in unrecompiled.txt.
+entries = []
+
+# Emit the original disassembly as comments in the generated C++.
+comments = true
